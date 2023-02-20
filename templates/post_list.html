@@ -8,7 +8,7 @@
 <body>
 <main>
 
-    <a href="index.html" class="link">Назад</a>
+    <a href="/" class="link">Назад</a>
 
     <h1>Посты по запросу "Кот и Хлеб"</h1>
 
@@ -23,6 +23,15 @@
         <p>Описание поста тут </p>
     </div>
     <hr>
+
+    {% for file in files %}
+        <div class="post">
+            <img src={{file["pic"]}} width="100%" alt="">
+            <p>{{file["content"]}} </p>
+        </div>
+        <hr>
+    {% endfor %}
+
     <a href="post_form.html" class="button">Добавить пост</a>
 
 </main>
